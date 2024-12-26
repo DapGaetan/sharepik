@@ -1,0 +1,149 @@
+// colors
+$primary-color: #db1313;
+    $primary-light-color: #ee1d1d;
+        $primary-shadow-color: #b90b0b;
+$secondary-color: #ff8a8a;
+    $secondary-light-color: #ff9d9d;
+        $secondary-shadow-color: #b65454;
+$background-color: #f8f0f0;
+    $background-light-color: #f8f6f6;
+        $background-shadow-color: #d3bebe;
+
+// if snaped
+$snap-color: #ac13db;
+    $snap-light-color: #bd1dee;
+        $snap-shadow-color: #aa0bb9;
+$snap-secondary-color: #ff8aff;
+    $snap-secondary-shadow-color: #b654b1;
+$snap-background-color: #f8f0f8;
+    $snap-background-light-color: #f8f6f8;
+        $snap-background-shadow-color: #d1bed3;
+
+  
+.pik-snap-card{
+margin: 30px;
+width: 200px;
+height: 420px;
+border-radius: 15px;
+border: 1px solid $primary-color;
+background-color: $background-color;
+box-shadow: $primary-color 6px 6px 1px;
+text-align: center;
+padding: 10px;
+
+&:hover{
+    transform: translate(1px, 1px);
+    transition: 160ms;
+
+    border: 1px solid $primary-light-color;
+    background-color: $background-light-color;
+    box-shadow: $primary-light-color 6px 6px 1px;
+}
+
+h2{
+    font-size: 1.8rem;
+    color: $primary-color;
+}
+
+p{
+    font-size: 0.8rem;
+    color: rgb(0, 0, 0);
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: $secondary-color;
+}
+
+img{
+    width: 50%;
+    height: 150px;
+    margin: 50,50;
+    border-radius: 5px;
+    padding: 20px;
+}
+button{
+    margin: 30px;
+    border-radius: 55px;
+    border: none;
+    background-color: $primary-color;
+    width: max-content;
+    padding: 6px 10px 6px 10px;
+    color: white;
+    box-shadow: 2px 2px 1px 2px $secondary-color;
+
+    &:hover{
+        background-color: $primary-light-color;
+        box-shadow: 2px 2px 1px 2px $secondary-light-color;
+    }
+
+    &:active{
+        background-color: $primary-shadow-color;
+        box-shadow: 2px 2px 1px 2px $secondary-shadow-color;
+        transition: 1s;
+    }
+}
+
+
+}
+
+.snapped{
+    margin: 30px;
+    width: 200px;
+    height: 420px;
+    border-radius: 15px;
+    border: 1px solid $snap-color;
+    background-color: $snap-background-color;
+    box-shadow: $snap-color 6px 6px 1px;
+    text-align: center;
+    padding: 10px;
+    
+    &:hover{
+        transform: translate(1px, 1px);
+        transition: 160ms;
+    
+        border: 1px solid $snap-light-color;
+        background-color: $snap-background-light-color;
+        box-shadow: $snap-light-color 6px 6px 1px;
+    }
+    
+    h2{
+        font-size: 1.8rem;
+        color: $snap-color;
+    }
+    
+    p{
+        font-size: 0.8rem;
+        color: rgb(0, 0, 0);
+        text-overflow: ellipsis;
+        font-weight: 600;
+        color: $snap-secondary-color;
+    }
+    
+    img{
+        width: 50%;
+        height: 150px;
+        margin: 50,50;
+        border-radius: 5px;
+        padding: 20px;
+    }
+    button{
+        margin: 30px;
+        border-radius: 55px;
+        border: none;
+        background-color: $snap-color;
+        width: max-content;
+        padding: 6px 10px 6px 10px;
+        color: white;
+        box-shadow: 2px 2px 1px 2px $snap-secondary-color;
+    
+        &:hover{
+            background-color: $snap-light-color;
+        }
+    
+        &:active{
+            background-color: $snap-shadow-color;
+            transition: 1s;
+        }
+    }
+    
+    
+    }

@@ -1,0 +1,13 @@
+
+<div class="pik-snap-card" [ngClass]="{ snapped: isSnap }">
+    <h2>{{ pikSnap.title | titlecase }}</h2>
+    <img [src]="pikSnap.imageUrl" [alt]="pikSnap.title">
+    <p>{{ pikSnap.description }}</p>
+    <p>Pik poster le {{ pikSnap.createdAt | date: 'd/M/Y à HH:MM'}}</p>
+    @if (pikSnap.location) {
+        <p>localisation : {{pikSnap.location}}</p>
+    }@else{
+        <p>localisation non partager</p>
+    }
+    <button (click)="onSnap()">{{ emote }} <span [ngStyle]="{ color: 'rgb(0, '+ pikSnap.snaps +', 0)' }">{{ pikSnap.snaps }}</span></button>
+</div>

@@ -1,0 +1,72 @@
+// colors
+$primary-color: #db1313;
+    $primary-light-color: #ee1d1d;
+        $primary-shadow-color: #b90b0b;
+$secondary-color: #ff8a8a;
+    $secondary-light-color: #ff9d9d;
+        $secondary-shadow-color: #b65454;
+$background-color: #f8f0f0;
+    $background-light-color: #f8f6f6;
+        $background-shadow-color: #d3bebe;
+
+// if snaped
+$snap-color: #ac13db;
+    $snap-light-color: #bd1dee;
+        $snap-shadow-color: #aa0bb9;
+$snap-secondary-color: #ff8aff;
+    $snap-secondary-shadow-color: #b654b1;
+$snap-background-color: #f8f0f8;
+    $snap-background-light-color: #f8f6f8;
+        $snap-background-shadow-color: #d1bed3;
+
+nav{
+    height: 100px;
+    width: 90%;
+    margin: auto;
+    border: $primary-color 1px solid;
+    border-top: none;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    background-color: $background-color;
+    padding: 0;
+    margin-bottom: 30px;
+    box-shadow: $primary-color 10px 0px 1px 5px;
+    position: sticky;
+
+    h1{
+        padding: 5px 0px 0px 10px;
+        color: $primary-color;
+    }
+
+    p{
+        padding: 2px 0px 0px 10px;
+        color: $secondary-color;
+        font-weight: bold;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    li{
+        list-style: none;
+        padding: 0px 10px 0px 0px;    
+    }
+
+    a{
+        color: $primary-light-color;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 55px;
+        background-color: $secondary-color;
+        padding: 6px 10px 6px 10px;
+    }
+
+    .active{
+        color: $background-color;
+        background-color: $secondary-color;
+        text-shadow: 2px 2px 20px $background-light-color;
+    }
+}
