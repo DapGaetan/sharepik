@@ -36,11 +36,16 @@ export class PikSnapsService {
         return [...this.pikSnaps];
       }
 
-      snapPikSnapById(pikSnapId: string, snapType: SnapType): void{
+      getPikSnapById(pikSnapId: string): PikSnap{
         const foundPikSnap : PikSnap | undefined = this.pikSnaps.find(pikSnap => pikSnap.id === pikSnapId);
         if (!foundPikSnap) {
             throw new Error('PikSnap not found');
         }
-        foundPikSnap.snap(snapType);
+        return foundPikSnap
+      }
+
+      snapPikSnapById(pikSnapId: string, snapType: SnapType): void{
+        const pikSnap : PikSnap = this.getPikSnapById(pikSnapId);
+        pikSnap.snap(snapType);
       }
 }

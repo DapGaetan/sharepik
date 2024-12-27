@@ -1,5 +1,5 @@
-
-<div (click)="onViewPikSnap()" class="pik-snap-card" [ngClass]="{ snapped: isSnap }">
+<div class="pik-snap-card" [ngClass]="{ snapped: isSnap }">
+    <a routerLink="/piksnaps"><i class="fa-solid fa-arrow-right"></i> Gallery</a>
     <h2>{{ pikSnap.title | titlecase }}</h2>
     <img [src]="pikSnap.imageUrl" [alt]="pikSnap.title">
     <p>{{ pikSnap.description }}</p>

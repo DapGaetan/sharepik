@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { PikSnap } from '../models/pik-snap';
 import { DatePipe, NgClass, NgStyle, TitleCasePipe } from '@angular/common';
 import { PikSnapsService } from '../services/pik-snaps.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pik-snap',
@@ -14,7 +15,8 @@ export class PikSnapComponent implements OnInit{
   isSnap! : boolean;
   emote! : string;
 
-  constructor(private pikSnapService: PikSnapsService) {}
+  constructor(private pikSnapService: PikSnapsService,
+              private router: Router) {}
 
   ngOnInit(): void {
      this.isSnap = false;
@@ -39,5 +41,9 @@ export class PikSnapComponent implements OnInit{
     } else {
       this.unSnap()
     }
+  }
+
+  onViewPikSnap() {
+    this.router.navigateByUrl(`piksnap/${this.pikSnap.id}`)
   }
 }
